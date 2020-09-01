@@ -1,0 +1,8 @@
+<h1> Welcome to Dog Home</h1>
+<h2>Dog Name</h2>
+<ul>
+
+<% @dogs.sort_by do |dog| %>
+<li><%= link_to "🐶#{dog.name}", dog_path(dog)%></li>
+<%end%>
+</ul>

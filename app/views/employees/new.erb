@@ -1,0 +1,16 @@
+<H3>Create a New Employee</h3>
+<%= form_for @employee do |f|%>
+<%= f.label "First Name"%>
+<%= f.text_field :first_name%><br>
+<%= f.label "Last Name"%>
+<%= f.text_field :last_name%><br>
+<%= f.label "Alias"%>
+<%= f.text_field :alias%><br>
+<%= f.label "Office"%>
+<%= f.text_field :office%><br>
+<%= f.label "Title"%>
+<%= f.text_field :title%><br>
+<%= f.collection_select :dog_id, Dog.all,:id,:name%>
+<%=f.submit "submit"%>
+<%end%>
+<%= link_to "home", employees_path, method: :get%>
