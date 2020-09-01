@@ -1,0 +1,10 @@
+<h1><%= link_to "Employee Home", employees_path%></h1>
+<h3>Name: <%=@employee.first_name%> <%=@employee.last_name%></h3>
+<h3>Alias: <%=@employee.alias%></h3>
+<h3>Title: <%=@employee.title%></h3>
+<h3>Office: <%=@employee.office%></h3>
+<%# <%= image_tag @employee.img_url%>
+<%= link_to "Home", employees_path, method: :get%><br>
+<%= link_to "Edit #{@employee.full_name}", edit_employee_path(@employee), method: :get%><br>
+<%= link_to "Say bye to #{@employee.full_name}", @employee, method: :delete%>
+
