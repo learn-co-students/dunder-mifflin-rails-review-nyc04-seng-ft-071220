@@ -1,0 +1,10 @@
+<h1> All Dogs </h1>
+
+<ul>
+<%@dogs.map do |dog|%>
+<li> 
+<%= link_to dog.name, dog_path(dog)%>
+<%end%>
+</li>
+
+</ul>
