@@ -1,0 +1,9 @@
+<h2>The Employees </h2>
+
+<ul>
+<%@employees.map do |employ|%>
+<li>
+<%=link_to employ.first_name, employee_path(employ)%>
+</li>
+<%end%>
+</ul>
