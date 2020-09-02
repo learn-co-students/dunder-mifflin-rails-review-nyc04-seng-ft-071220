@@ -1,0 +1,31 @@
+<h1> Add New Employee </h1>
+
+<%= form_for @employee do |f| %>
+<p>
+    <b>first name</b><br>
+    <%= f.text_field :first_name %>
+</p>
+<p>
+    <b>last name</b><br>
+    <%= f.text_field :last_name %>
+</p>
+<p>
+    <b>alias</b><br>
+    <%= f.text_field :alias %>
+</p>
+<p>
+    <b>title</b><br>
+    <%= f.text_field :title %>
+</p>
+<p>
+    <b>office</b><br>
+    <%= f.text_field :office %>
+</p>
+<p>
+    <b>dog</b><br>
+    <%= f.collection_select :dog_id, Dog.all, :id, :name %>
+</p>
+<p>
+    <%= f.submit %>
+</p>
+<% end %>

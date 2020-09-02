@@ -1,0 +1,12 @@
+<h1> Employee Show Page </h1>
+
+<h2> <%= "#{@employee.first_name} #{@employee.last_name}" %> </h2>
+
+<ul>
+    <li> Alias: <%= @employee.alias %></li>
+    <li> Title: <%= @employee.title %></li>
+    <li> Office: <%= @employee.office %></li>
+    <li> Dog: <%= @employee.dog.name %></li>
+</ul>
+
+<%= image_tag @employee.img_url, size: "650x400" %>
